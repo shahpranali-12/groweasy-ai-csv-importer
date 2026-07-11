@@ -52,7 +52,13 @@ export default function UploadBox() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:5000/api/import", {
+      const response = await fetch(
+  "https://groweasy-backend-5g6z.onrender.com/api/import",
+  {
+    method: "POST",
+    body: formData,
+  }
+);
         method: "POST",
         body: formData,
       });

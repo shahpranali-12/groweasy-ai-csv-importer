@@ -59,10 +59,6 @@ export default function UploadBox() {
     body: formData,
   }
 );
-        method: "POST",
-        body: formData,
-      });
-
       const data = await response.json();
 
       if (!response.ok || !data.success) {
